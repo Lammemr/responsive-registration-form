@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Code Review</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+    <body>
+
+        <div class="main-heading">
+            <h1>The Code Review</h1>
+        </div>
+        <div class="header-with-lines">
+            <header class="header-container">
+                <h2>Signup for our newsletter</h2>
+                <p>Get the latest news on how your code is doing right in your inbox</p>
+            </header>
+            <hr class="header-top-line">
+            <hr class="header-bottom-line"><br>
+        </div>
+        <main>
+            <form class="form_container">
+                <fieldset>
+                    <legend>Contact Information</legend>
+
+                    <div class="contact-info-container">
+                        <label class="flex_label" for="name">Full Name</label>
+                        <input class="flex_input" type="text" id="name" name="user_name" placeholder="Required"><br>
+                        <label class="flex_label" for="email">Email Address</label>
+                        <input class="flex_input" type="email" id="email" name="user_email" placeholder="Required"><br>
+                        <label class="flex_label" for="phone">Phone Number</label>
+                        <input class="flex_input" type="tel" id="phone" name="user_phone"><br>
+                        <label class="flex_label" for="address">Street Address</label>
+                        <input class="flex_input" type="text" id="address" name="user_address"><br>
+                        <label class="flex_label" for="city">City</label>
+                        <input class="flex_input" type="text" id="city" name="user_city"><br>
+                        <label class="flex_label" for="state">State</label>
+                        <select class="flex_input" id="state" name="user_state">
+                            <option value="">Choose State</option>
+                            <optgroup label="State">
+                                <option value="alabama">Alabama</option>
+                                <option value="california">California</option>
+                                <option value="delaware">Delaware</option>
+                                <option value="florida">Florida</option>
+                                <option value="georgia">Georgia</option>
+                                <option value="hawaii">Hawaii</option>
+                                <option value="idaho">Idaho</option>
+                                <option value="kansas">Kansas</option>
+                                <option value="louisiana">Louisiana</option>
+                                <option value="maine">Maine</option>
+                            </optgroup>
+                        </select><br>
+                        <label for="zipcode" class="flex_label">Zip Code</label>
+                        <input type="text" id="zipcode" name="user_zip" class="flex-input">
+                    </div>
+                </fieldset>
+                <hr class="form-break-line">
+                <fieldset class="newsletter-options">
+                    <legend class="newsletter-legend">Newsletter</legend>
+                    <label class="newsletter-type">Select the newsletter you would like to recieve</label><br>
+                    <input type="checkbox" id="newsletter-type-html" value="newsletter_type_html" name="user_newsletter_type"><label for="newsletter-type-html">HTML News</label><br>
+                    <input type="checkbox" id="newsletter-type-css" value="newsletter_type_css" name="user_newsletter_type"><label for="newsletter-type-css">CSS News</label><br>
+                    <input type="checkbox" id="newsletter-type-jscript" value="newsletter_type_jscript" name="user_newsletter_type"><label for="newsletter-type-jscript">Javascript News</label>
+
+                    <h3 class="newsletter-format-legend">Newsletter Format</h3>
+                    <input type="radio" id="html" name="newsletter_format" value="html">
+                    <label for="html">HTML</label><br>
+                    <input type="radio" id="plain_text" name="newsletter_format" value="plain_text">
+                    <label for="plain_text">Plain Text</label><br>
+                    
+                    <label for="other_topics">Other topics you'd like to hear about</label><br>
+                    <textarea id="other_topics" name="user_other_topics"></textarea>
+                </fieldset>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </main>
+        <footer>
+            <p>Copyright The Code Review</p>
+        </footer>
+    </body>
+</html>
+    
