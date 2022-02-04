@@ -55,7 +55,6 @@ h2 {
 .header-bottom-line {
   border: 1.5px solid black;
   margin-top: 2px;
-  margin-bottom: -10px;
 }
 
 form {
@@ -63,13 +62,12 @@ form {
   color: #5e5e5e;
   margin-left: 0px;
   margin-right: 0px;
-  padding: 0px 20px;
 }
 
 legend {
   font-size: 1.25em;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   color: rgb(58, 58, 58);
 }
 
@@ -80,6 +78,14 @@ legend {
   font-family: "merriweather", serif;
 }
 
+form div.input-container,
+form div.input-container-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -87,40 +93,44 @@ textarea,
 select {
   border: none;
   height: 35px;
-  margin: auto;
   margin-top: 10px;
   outline: 0;
   padding: 5px;
-  width: 98%;
   background-color: #eeeeee;
   color: #4e4e4e;
   margin-bottom: 20px;
   border-radius: 5px;
 }
 
+textarea {
+  height: 100px;
+}
+
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
-textarea:focus {
-border: 5px solid rgb(62, 61, 114);
-margin-top: 5px;
-margin-bottom: 15px;
+textarea:focus,
+select:focus {
+border: 2px solid rgb(62, 61, 114);
+border-radius: 2px;
 }
 
 input[type="text"]#zipcode {
-  width: 35%;
-  display: block;
+  width: 50%;
   margin-left: 0px;
 }
 
 select {
   height: 45px;
   padding: 5px;
-  width: 100%;
 }
 
-textarea {
-  height: 100px;
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 95%;
+  margin: auto;
 }
 
 button {
@@ -129,13 +139,11 @@ button {
   font-size: 18px;
   text-align: center;
   border-radius: 8px;
-  width: 89%;
   font-family: "merriweather", serif;
   box-shadow: none;
   border-style: none;
-  height: 75px;
-  margin-left: 20px;
-  margin-top: 15px;
+  height: 50px;
+  flex-grow: 1;
 }
 
 fieldset {
@@ -145,15 +153,13 @@ fieldset {
   padding: 0px;
 }
 
-fieldset.newsletter-options {
-  margin-left:20px;
-  margin-right: 20px;
+.newsletter-check-label {
+  margin-left: 5px;
 }
 
 .newsletter-legend {
   margin-top: 10px;
   margin-bottom: 15px;
-  margin-left: -10px;
 }
 
 .newsletter-format-legend {
@@ -166,11 +172,12 @@ fieldset.newsletter-options {
 
 input[type="checkbox"] {
   margin-top: 20px;
-  margin-bottom: 5px;;
+  margin-bottom: 5px;
+  margin-left: 5px;
 }
 
 input[type="radio"] {
-  margin-bottom: 20px;;
+  margin-bottom: 20px;
 }
 
 footer {
@@ -203,51 +210,36 @@ footer {
       margin: auto;
     }
     
-    button {
+    .button-container {
       width: 100%;
-      margin: auto;
     }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="text"]#zipcode,
-    select {
-      width: 75%;
-      display: inline-block;
-      margin-right: 0px;
-      margin-left: 40px;
-      overflow: hidden;
-    }
-   
     input[type="text"]#zipcode {
-      width: 35%;
-      margin-left: 337px;
+      width: 100%;
     }
 
-    input[type="text"]#name {
-      margin-left: 67px;
+    form div.input-container {
+      justify-content: flex-end;
+      align-items: baseline;
+      flex-direction: row;
     }
 
-    input[type="text"]#address {
-      margin-left: 43px;
+    .input-container label {
+      flex: 1;
     }
 
-    select#state {
-      margin-left: 105px;
-      width: 497.5px;
+    .input-container input, 
+    .input-container select, 
+    div.input-container-zip-field  {
+      flex: 2;
     }
 
-    input[type="text"]#city {
-      margin-left: 110px;
+    .input-container-zip-field {
+      display: flex;
+      justify-content: flex-start;
     }
 
-    fieldset.newsletter-options {
-      max-width: 650px;
-      margin: auto;
-    }
-
-    .newsletter-legend {
-      margin-left: 0px;
+    .input-container-zip-field input{
+      flex-grow: .25;
     }
 }
